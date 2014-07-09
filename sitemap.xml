@@ -10,36 +10,43 @@
   
   
   <url>
-    <loc>http://hselin.github.io/blog/archives/</loc>
-    <lastmod>2014-06-26T22:10:07-07:00</lastmod>
+    <loc>http://hselin.github.io/archives/</loc>
+    <lastmod>2014-07-08T17:35:02-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://hselin.github.io/</loc>
-    <lastmod>2014-06-26T22:10:07-07:00</lastmod>
+    <lastmod>2014-07-08T17:35:02-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
-    <loc>http://hselin.github.io/blog/</loc>
-    <lastmod>2014-06-26T22:10:07-07:00</lastmod>
+    <loc>http://hselin.github.io/blog/archives/</loc>
+    <lastmod>2014-07-08T17:35:02-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>http://hselin.github.io/archives/</loc>
-    <lastmod>2014-06-26T22:10:07-07:00</lastmod>
+    <loc>http://hselin.github.io/blog/</loc>
+    <lastmod>2014-07-08T17:35:02-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://hselin.github.io/about/</loc>
-    <lastmod>2014-06-26T22:10:07-07:00</lastmod>
+    <lastmod>2014-07-08T17:35:02-07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://hselin.github.io/projects/</loc>
+    <lastmod>2014-07-08T17:35:02-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
