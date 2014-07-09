@@ -9,6 +9,6 @@ footer: true
 
 ->{% img right /images/about/hselin-small-portrait.png %}<-
 
-->Albert Hselin Chen<-
+->Worked: @Western Digital, @Microsoft, @Various startups • Studied: @Stanford, @Cornell<-
 
-->Worked at @Western Digital, @Microsoft, @Startups • Studied at @Stanford, @Cornell<-
+-><a href="{{ root_url }}/projects">My Projects</a><-
