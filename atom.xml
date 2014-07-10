@@ -4,7 +4,7 @@
   <title><![CDATA[Hselin]]></title>
   <link href="http://hselin.github.io/atom.xml" rel="self"/>
   <link href="http://hselin.github.io/"/>
-  <updated>2014-07-08T17:40:12-07:00</updated>
+  <updated>2014-07-09T18:26:26-07:00</updated>
   <id>http://hselin.github.io/</id>
   <author>
     <name><![CDATA[Albert Chen]]></name>
@@ -12,6 +12,27 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Code diversity]]></title>
+    <link href="http://hselin.github.io/blog/2014/07/09/code-diversity/"/>
+    <updated>2014-07-09T17:16:38-07:00</updated>
+    <id>http://hselin.github.io/blog/2014/07/09/code-diversity</id>
+    <content type="html"><![CDATA[<div style="overflow:auto">
+  <img class="float-left" src="http://hselin.github.io/images/posts/bones.jpg" style="width: 200px; height: 200px; margin-right: 10px">
+  It&#8217;s been 3 month since <a href="http://en.wikipedia.org/wiki/Heartbleed">HeartBleed</a> was publicly disclosed.
+  According to Wikipedia ~17% of secure web servers were believed to be vulnerable.
+  </br>
+  </br>
+  That makes me wonder - what is the affect of our increasing reliance on a few well known libraries for application functionalities?
+  Will this limit the &#8220;genetic diversity&#8221; of our software ecosystem?
+  </br>
+  </br>
+  On one hand, as long as we take good care of our libraries this reduces the amount of development, test, and inter-op costs and also prevents amateur mistakes. It&#8217;s akin to putting our eggs in a few selected baskets and taking good care of them (I stole this phrase from Prof. Cheriton). But what happens when you drop a basket? A major bug in a library could have devastating results for the whole ecosystem as it might be used by a significant number of applications.
+</div>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Test Title]]></title>
