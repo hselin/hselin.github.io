@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "projects"
+title: "Projects"
 date: 2014-06-26 22:19
 comments: false
 sharing: true
