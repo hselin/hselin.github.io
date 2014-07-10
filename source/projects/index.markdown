@@ -2,7 +2,7 @@
 layout: page
 title: "projects"
 date: 2014-06-26 22:19
-comments: true
+comments: false
 sharing: true
 footer: true
 ---
@@ -47,8 +47,6 @@ footer: true
   <br />
   <br />
   Shingled Magnetic Recording is a disruptive technology. It increases the capacity of the drive at the expense of not supporting random writes. This limits the adoption of SMR devices in traditional systems with write in place file systems. We can address the write expectations of SMR through various layers of abstraction, from application to firmware. A high abstraction layer provides more room for innovation and a more consistent performance guarantee. Thus, one potential implementation is through the familiar POSIX/Unix file system interface which provides a stable and familiar abstraction for both the storage vendor and user.
-  <br />
-  <br />
   In this presentation we would like to share some of the thoughts, lessons and experiences that we went through in making Linear Tape File System work with SMR drives. 
 </div>
 
@@ -64,7 +62,7 @@ footer: true
   <br />
   A visual map of geographical relationships based on the latest news from BBC, Reuters, NPR and AP.
   <br />
-  Note: not actively maintained.
+  Not actively maintained.
 </div>
 
 <hr class="thin-grey-line" noshade="" size="2">
@@ -74,12 +72,14 @@ footer: true
   <br />
   <br />
   <img class="project-image" src="/images/projects/windows.gif" style="">
-  Result of working as program manager (PM) of Windows storage stack - an experience best not repeated :)
+  Various utilities for storage debugging/management.
   <br />
   <br />
-  Azure disk: Storport virtual miniport to mount Azure blob store as a SCSI disk</a>
+  Azure disk: Storport virtual miniport to mount Azure blob store as a SCSI disk.
   <br />
-  Initiator utilities: Command line utility to send passthrough ATA commands</a>
+  Initiator utilities: Command line utility to send passthrough ATA commands.
   <br />
-  IO recorder: Software bus analyzer for capturing IO of local & remote machines
+  IO recorder: Software bus analyzer for capturing IO of local & remote machines.
+</div>
+
 <hr class="thin-grey-line" noshade="" size="2">
