@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Hselin]]></title>
+  <link href="http://hselin.github.io/atom.xml" rel="self"/>
+  <link href="http://hselin.github.io/"/>
+  <updated>2014-07-23T14:32:29-07:00</updated>
+  <id>http://hselin.github.io/</id>
+  <author>
+    <name><![CDATA[Albert Chen]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[iOS, XMLHttpRequest and Video]]></title>
+    <link href="http://hselin.github.io/blog/2014/07/23/ios-xmlhttprequest-and-video/"/>
+    <updated>2014-07-23T14:30:33-07:00</updated>
+    <id>http://hselin.github.io/blog/2014/07/23/ios-xmlhttprequest-and-video</id>
+    <content type="html"><![CDATA[<div style="overflow:auto">
+  <img class="float-left" src="http://hselin.github.io/images/posts/apple-logo.png" style="width: 200px; height: 100px; margin-right: 10px">
+  So&#8230; Safari on iOS <a href="http://caniuse.com/video ">supports</a> HTML5 video element. That&#8217;s great, good job Apple.
+  <br />
+  BUT - why can&#8217;t you take the extra step of allowing the video element to work with blob object URL as the source?!
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'>  <span class="kd">var</span> <span class="nx">oReq</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span>
+</span><span class='line'>  <span class="nx">oReq</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="nx">URL</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+</span><span class='line'>  <span class="nx">oReq</span><span class="p">.</span><span class="nx">responseType</span> <span class="o">=</span> <span class="s2">&quot;blob&quot;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nx">oReq</span><span class="p">.</span><span class="nx">onreadystatechange</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">if</span><span class="p">((</span><span class="nx">oReq</span><span class="p">.</span><span class="nx">readyState</span> <span class="o">==</span> <span class="mi">4</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="nx">oReq</span><span class="p">.</span><span class="nx">status</span> <span class="o">==</span> <span class="mi">200</span><span class="p">))</span> <span class="p">{</span>
+</span><span class='line'>      <span class="kd">var</span> <span class="nx">blobURL</span> <span class="o">=</span> <span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">URL</span> <span class="o">||</span> <span class="nb">window</span><span class="p">.</span><span class="nx">webkitURL</span><span class="p">).</span><span class="nx">createObjectURL</span><span class="p">(</span><span class="nx">oReq</span><span class="p">.</span><span class="nx">response</span><span class="p">);</span>
+</span><span class='line'>      <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#myVideo&quot;</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&quot;src&quot;</span><span class="p">,</span> <span class="nx">blobURL</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nx">oReq</span><span class="p">.</span><span class="nx">send</span><span class="p">();</span>
+</span></code></pre></td></tr></table></div></figure>
+  
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Code diversity]]></title>
+    <link href="http://hselin.github.io/blog/2014/07/09/code-diversity/"/>
+    <updated>2014-07-09T17:16:38-07:00</updated>
+    <id>http://hselin.github.io/blog/2014/07/09/code-diversity</id>
+    <content type="html"><![CDATA[<div style="overflow:auto">
+  <img class="float-left" src="http://hselin.github.io/images/posts/bones.jpg" style="width: 200px; height: 200px; margin-right: 10px">
+  It&#8217;s been 3 month since <a href="http://en.wikipedia.org/wiki/Heartbleed">HeartBleed</a> was publicly disclosed.
+  According to Wikipedia ~17% of secure web servers were believed to be vulnerable.
+  <br />
+  <br />
+  That makes me wonder - what is the affect of our increasing reliance on a few well known libraries for application functionalities?
+  Will this limit the &#8220;genetic diversity&#8221; of our software ecosystem?
+  <br />
+  <br />
+  On one hand, as long as we take good care of our libraries this reduces the amount of development, test, and inter-op costs and also prevents amateur mistakes. It&#8217;s akin to putting our eggs in a few selected baskets and taking good care of them (I stole this phrase from Prof. Cheriton). But what happens when you drop a basket? A major bug in a library could have devastating results for the whole ecosystem as it might be used by a significant number of applications.
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Test Title]]></title>
+    <link href="http://hselin.github.io/blog/2014/06/24/test-title/"/>
+    <updated>2014-06-24T22:55:50-07:00</updated>
+    <id>http://hselin.github.io/blog/2014/06/24/test-title</id>
+    <content type="html"><![CDATA[<p>Hello World!</p>
+]]></content>
+  </entry>
+  
+</feed>
