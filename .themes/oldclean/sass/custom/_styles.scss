@@ -1,0 +1,25 @@
+// This File is imported last, and will override other styles in the cascade
+// Add styles here to make changes without digging in too much
+@import "footnote";
+
+hr.thin-grey-line {
+  margin: 20px 0;
+  border: 0;
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #ffffff;
+}
+
+.float-left {
+  float: left;
+}
+
+.no-border {
+  border-style: none;
+}
+
+img.project-image {
+  width: 100px;
+  height: 80px;
+  margin-right: 10px;
+  float: left;
+}
