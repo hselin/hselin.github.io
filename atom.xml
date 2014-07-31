@@ -4,7 +4,7 @@
   <title><![CDATA[Hselin]]></title>
   <link href="http://hselin.github.io/atom.xml" rel="self"/>
   <link href="http://hselin.github.io/"/>
-  <updated>2014-07-23T14:32:29-07:00</updated>
+  <updated>2014-07-30T23:54:06-07:00</updated>
   <id>http://hselin.github.io/</id>
   <author>
     <name><![CDATA[Albert Chen]]></name>
@@ -12,6 +12,19 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[I don't know]]></title>
+    <link href="http://hselin.github.io/blog/2014/07/30/i-dont-know/"/>
+    <updated>2014-07-30T23:24:31-07:00</updated>
+    <id>http://hselin.github.io/blog/2014/07/30/i-dont-know</id>
+    <content type="html"><![CDATA[<div style="overflow:auto">
+  <img class="float-left" src="http://hselin.github.io/images/posts/1.jpg" style="width: 200px; height: 200px; margin-right: 10px">
+  
+</div>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[iOS, XMLHttpRequest and Video]]></title>
