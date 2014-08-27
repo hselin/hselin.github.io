@@ -4,7 +4,7 @@
   <title><![CDATA[Hselin]]></title>
   <link href="http://hselin.github.io/atom.xml" rel="self"/>
   <link href="http://hselin.github.io/"/>
-  <updated>2014-07-31T00:52:13-07:00</updated>
+  <updated>2014-08-26T18:09:00-07:00</updated>
   <id>http://hselin.github.io/</id>
   <author>
     <name><![CDATA[Albert Chen]]></name>
@@ -12,6 +12,38 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[3rd-party cookies]]></title>
+    <link href="http://hselin.github.io/blog/2014/08/26/3rd-party-cookies/"/>
+    <updated>2014-08-26T17:30:14-07:00</updated>
+    <id>http://hselin.github.io/blog/2014/08/26/3rd-party-cookies</id>
+    <content type="html"><![CDATA[<div style="overflow:auto">
+  <a href="http://cs142.stanford.edu">CS142: Web Applications</a> writing assignment. 
+  <br />
+  <br />
+  Should browsers <i>disable</i> or <i>enable</i> 3rd-party cookies by default?
+  <br />
+  <br />
+  <b>Introduction</b>
+  <br />
+  While third-party cookies enable new web functionalities, it can also expose users’ browsing 
+  history without users’ awareness. A person’s web history inevitably reveals personal 
+  information, which could be maliciously exploited for economical and/or psychological harm.
+  Furthermore, users’ obliviousness impedes the use of market force to regulate these third 
+  parties. To address this ecosystem deficiency, browsers should disable third-party cookies by 
+  default – requiring users to explicitly &#8220;opt-in&#8221;. 
+  <br />
+  <br />
+  <br />
+  <img class="float-left" src="http://hselin.github.io/images/posts/cookies.png" style="width: 200px; height: 100px; margin-right: 10px">
+  <br />
+  <br />
+  <a href="http://hselin.github.io/resources/cs142-hselin-htyen-writing.pdf">Full write-up here</a>
+</div>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[I don't know]]></title>
