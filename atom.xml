@@ -4,7 +4,7 @@
   <title><![CDATA[Hselin]]></title>
   <link href="http://hselin.github.io/atom.xml" rel="self"/>
   <link href="http://hselin.github.io/"/>
-  <updated>2014-08-26T18:09:00-07:00</updated>
+  <updated>2015-06-25T03:53:50-07:00</updated>
   <id>http://hselin.github.io/</id>
   <author>
     <name><![CDATA[Albert Chen]]></name>
@@ -12,6 +12,32 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Ola Diabetes Care]]></title>
+    <link href="http://hselin.github.io/blog/2015/06/25/ola-diabetes-care/"/>
+    <updated>2015-06-25T02:31:42-07:00</updated>
+    <id>http://hselin.github.io/blog/2015/06/25/ola-diabetes-care</id>
+    <content type="html"><![CDATA[<div style="overflow:auto">
+  <a href="http://cs147.stanford.edu">CS 147: HCI+D</a> class project. 
+  <br />
+  <br />
+  Ola is a system (smartphone application + wearable pod) that provides real-time context-aware care for diabetic patients by using smart wearable devices and advanced data analytics.
+  <br />
+  <br />
+  <a href="http://hci.stanford.edu/courses/cs147/2014/au/projects/information/ola/index.html">Project website</a>
+  <br />
+  <a href="http://stanford.edu/class/cs194h/projects/ola/finalreport.pdf">Read project report here</a>
+  <br />
+  <br />
+  <b>Concept video</b>
+  <br />
+  <iframe src="https://player.vimeo.com/video/109275030" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+</div>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[3rd-party cookies]]></title>
