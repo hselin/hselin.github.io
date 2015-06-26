@@ -4,7 +4,7 @@
   <title><![CDATA[Hselin]]></title>
   <link href="http://hselin.github.io/atom.xml" rel="self"/>
   <link href="http://hselin.github.io/"/>
-  <updated>2015-06-25T03:53:50-07:00</updated>
+  <updated>2015-06-25T17:41:48-07:00</updated>
   <id>http://hselin.github.io/</id>
   <author>
     <name><![CDATA[Albert Chen]]></name>
@@ -14,6 +14,32 @@
 
   
   <entry>
+    <title type="html"><![CDATA[IX++]]></title>
+    <link href="http://hselin.github.io/blog/2015/06/25/ix-plus-plus/"/>
+    <updated>2015-06-25T16:21:16-07:00</updated>
+    <id>http://hselin.github.io/blog/2015/06/25/ix-plus-plus</id>
+    <content type="html"><![CDATA[<div style="overflow:auto">
+  <a href="http://cs344g.stanford.edu">(Your) Great Ideas for Networked Applications</a> class project. 
+  <br />
+  <br />
+  <b>Introduction</b>
+  <br />
+  IX++ is an extension of the IX Dataplane Operating System that uses PCI Single Root I/O Virtualization (SR-IOV) to run multiple networked applications concurrently with minimal interference. The original IX ran alongside Linux and required a dedicated physical network interface card (NIC) for each multi-threaded IX application, as well as one for Linux. In IX++, each multi-threaded application is instead given its own virtual NIC through SR-IOV, and Linux can run concurrently on the physical NIC. In brief, the original IX required a dedicated NIC for Linux and one NIC per IX application while IX++ uses NIC virtualization to allow Linux and multiple IX applications to multiplex a single physical NIC. In this paper we describe the implementation of IX++ and demonstrate its significant performance advantages over Linux when running concurrent networked applications. We also show that using different Linux Traffic Control Queuing Disciplines can help, but not close, this performance advantage.
+  <br />
+  <br />
+  <a href="http://hselin.github.io/resources/ix++_final_presentation.pdf">Project presentation</a>
+  <br />
+  <a href="http://hselin.github.io/resources/CS344g_ixplusplus_final paper.pdf">Read project report here</a>
+  <br />
+  <br />
+  <b>Latency vs Throughput</b>
+  <img class="float-left" src="http://hselin.github.io/images/posts/ix++_latency_chart.png" style="width: 100%; height: auto; margin-right: 10px">
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Ola Diabetes Care]]></title>
     <link href="http://hselin.github.io/blog/2015/06/25/ola-diabetes-care/"/>
     <updated>2015-06-25T02:31:42-07:00</updated>
@@ -21,6 +47,8 @@
     <content type="html"><![CDATA[<div style="overflow:auto">
   <a href="http://cs147.stanford.edu">CS 147: HCI+D</a> class project. 
   <br />
+  <br />
+  <b>Introduction</b>
   <br />
   Ola is a system (smartphone application + wearable pod) that provides real-time context-aware care for diabetic patients by using smart wearable devices and advanced data analytics.
   <br />
@@ -33,7 +61,9 @@
   <b>Concept video</b>
   <br />
   <iframe src="https://player.vimeo.com/video/109275030" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
+  <br />
+  <b>Low-fi Prototyping & Pilot Usability Testing</b>
+  <iframe src="https://docs.google.com/presentation/d/1IHg6FU_0lRwFgFxQo3oe5CXJjm7HFTq39mFR5cGb9rU/embed?start=false&loop=false&delayms=60000" frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 </div>
 
 ]]></content>
