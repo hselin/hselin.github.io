@@ -7,7 +7,7 @@ categories:
 ---
 
 <div style="overflow:auto">
-  <a href="http://cs344g.stanford.edu">(Your) Great Ideas for Networked Applications</a> class project. 
+  <a href="http://cs344g.stanford.edu">CS344G: (Your) Great Ideas for Networked Applications</a> class project. 
   <br />
   <br />
   <b>Introduction</b>
@@ -21,5 +21,5 @@ categories:
   <br />
   <br />
   <b>Latency vs Throughput</b>
-  <img class="float-left" src="/images/posts/ix++_latency_chart.png" style="width: 100%; height: auto; margin-right: 10px">
+  <img src="/images/posts/ix++_latency_chart.png" style="width: 100%; height: auto; margin-right: 10px">
 </div>
