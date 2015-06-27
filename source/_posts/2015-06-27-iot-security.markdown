@@ -12,7 +12,7 @@ categories:
   <br />
   <b>Introduction</b>
   <br />
-  Growth of IoT is phenomenal. More and more devices are becoming connected. This also means a greater attack surface and real life-threatening consequences in a security breach. 
+  Growth of IoT is phenomenal. More and more devices are becoming connected. This also means a bigger attack surface and real life-threatening consequences in a security breach. 
   <br />
   <iframe src="https://docs.google.com/presentation/d/1QP_UmcL-H6H5zTwYkXBoWcxrkyLfvdvht2SzhIx3kPA/embed?start=false&loop=false&delayms=0" frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
   <br />
