@@ -3,6 +3,12 @@
   
   
   <url>
+    <loc>http://hselin.github.io/blog/2015/06/27/sabrina/</loc>
+    <lastmod>2015-06-27T02:36:24-07:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
     <loc>http://hselin.github.io/blog/2015/06/26/the-world-wide-web/</loc>
     <lastmod>2015-06-26T02:51:27-07:00</lastmod>
     <priority>0.8</priority>
@@ -53,42 +59,42 @@
   
   <url>
     <loc>http://hselin.github.io/archives/</loc>
-    <lastmod>2015-06-26T03:35:53-07:00</lastmod>
+    <lastmod>2015-06-27T12:56:15-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://hselin.github.io/blog/archives/</loc>
-    <lastmod>2015-06-26T03:35:53-07:00</lastmod>
+    <lastmod>2015-06-27T12:56:15-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://hselin.github.io/</loc>
-    <lastmod>2015-06-26T03:35:53-07:00</lastmod>
+    <lastmod>2015-06-27T12:56:15-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
     <loc>http://hselin.github.io/blog/</loc>
-    <lastmod>2015-06-26T03:35:53-07:00</lastmod>
+    <lastmod>2015-06-27T12:56:15-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://hselin.github.io/projects/</loc>
-    <lastmod>2015-06-26T03:35:53-07:00</lastmod>
+    <lastmod>2015-06-27T12:56:15-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://hselin.github.io/about/</loc>
-    <lastmod>2015-06-26T03:35:53-07:00</lastmod>
+    <lastmod>2015-06-27T12:56:15-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>

@@ -4,7 +4,7 @@
   <title><![CDATA[Hselin]]></title>
   <link href="http://hselin.github.io/atom.xml" rel="self"/>
   <link href="http://hselin.github.io/"/>
-  <updated>2015-06-26T03:35:53-07:00</updated>
+  <updated>2015-06-27T12:56:15-07:00</updated>
   <id>http://hselin.github.io/</id>
   <author>
     <name><![CDATA[Albert Chen]]></name>
@@ -12,6 +12,58 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Sabrina]]></title>
+    <link href="http://hselin.github.io/blog/2015/06/27/sabrina/"/>
+    <updated>2015-06-27T02:36:24-07:00</updated>
+    <id>http://hselin.github.io/blog/2015/06/27/sabrina</id>
+    <content type="html"><![CDATA[<div style="overflow:auto">
+  Course project for <a href="http://cs294s.stanford.edu">CS 294S: Research Project in Software Systems and Security</a>. 
+  <br />
+  <br />
+  <b>Introduction</b>
+  <br />
+  Sabrina is an intelligent personal assistant that can help simplify your life. She can monitor events, perform actions and even control nearby devices on your behalf. Sabrina interacts with you through Omlet chat and gets to know you overtime. By taking care of all the little details, Sabrina enables you to focus on things that matter the most in your life&#8230;
+  <br />
+  <br />
+  <b>Overall framework</b>
+  <table style="width:100%; border-style: none; border-spacing: 50px; margin-top: 0px;">
+    <tr>
+      <td style="margin: 0px;"><img src="http://hselin.github.io/images/posts/Rulepedia.png" style="width: 100%; height: auto;"></td>
+      <td><img src="http://hselin.github.io/images/posts/Sabrina.png" style="width: 100%; height: auto;"></td> 
+    </tr>
+  </table>
+  <br />
+  <b>Project links</b>
+  <br />
+  <a href="https://vast-hamlet-6003.herokuapp.com/">Project website</a>
+  <br />
+  <a href="http://hselin.github.io/resources/Sabrina_Poster.pdf">Poster</a>
+  <br />
+  <a href="http://hselin.github.io/resources/Sabrina_Final_Report.pdf">Final report</a>
+  <br />
+  <br />
+  <b>TL;DR</b>
+  <br />
+  <span style="font-weight: bold; color:red;">Sabrina = Siri + XiaoBing + IoT + IFTTT</span>
+  <br />
+  <br />
+  <b>Concept + prototype video</b>
+  <br />
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/wYV210CyROY" frameborder="0" allowfullscreen style="margin-top: 0px;"></iframe>
+  <br />
+  <b>Project proposal</b>
+  <br />
+  <iframe src="https://docs.google.com/presentation/d/1NRr6eUPQ-D86pfjcNA2PfQzZaCHU5QQLo_UV_rmLmvo/embed?start=false&loop=false&delayms=0" frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" style="margin-top: 0px;"></iframe>
+  <br />
+  <b>Final progress report</b>
+  <br />
+  <iframe src="https://docs.google.com/presentation/d/1dT6UerwUmcwePs3PhN8jhbsyZhJZV5WmdrzS5LImTgA/embed?start=false&amp;loop=false&amp;delayms=0" frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" style="margin-top: 0px;"></iframe>
+</div>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[The World Wide Web]]></title>
@@ -42,7 +94,7 @@
   
   <b>Goal of the web</b>
   <ul style="margin-top: 0px;">
-    <li>Shared information space through which people and <span style="font-weight: bold; color:red; ">machines</span> could communicate</li>
+    <li>Shared information space through which people and <span style="font-weight: bold; color:red;">machines</span> could communicate</li>
     <ul>
       <li>Globally shared information space</li>
       <li>Machine analysis of work patterns, interactions and thoughts</li>
@@ -61,7 +113,7 @@
   <a href="http://hselin.github.io/resources/The_World_Wide_Web.pdf">Full write-up here</a>
 
   <br />
-  <img class="float-left" src="http://hselin.github.io/images/posts/memex.jpg" style="width: 300px; height: auto; margin-right: 10px">
+  <img class="float-left" src="http://hselin.github.io/images/posts/memex.jpg" style="width: 300px; height: auto;">
 </div>
 
 ]]></content>
@@ -87,7 +139,7 @@
   <br />
   <br />
   <b>Latency vs Throughput</b>
-  <img src="http://hselin.github.io/images/posts/ix++_latency_chart.png" style="width: 100%; height: auto; margin-right: 10px">
+  <img src="http://hselin.github.io/images/posts/ix++_latency_chart.png" style="width: 100%; height: auto;">
 </div>
 
 ]]></content>
@@ -117,7 +169,7 @@
   <iframe src="https://player.vimeo.com/video/109275030" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="margin-top: 0px;"></iframe>
   <br />
   <b>Low-fi Prototyping & Pilot Usability Testing</b>
-  <iframe src="https://docs.google.com/presentation/d/1IHg6FU_0lRwFgFxQo3oe5CXJjm7HFTq39mFR5cGb9rU/embed?start=false&loop=false&delayms=60000" frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" style="margin-top: 0px;"></iframe>
+  <iframe src="https://docs.google.com/presentation/d/1IHg6FU_0lRwFgFxQo3oe5CXJjm7HFTq39mFR5cGb9rU/embed?start=false&loop=false&delayms=0" frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" style="margin-top: 0px;"></iframe>
 </div>
 
 ]]></content>
