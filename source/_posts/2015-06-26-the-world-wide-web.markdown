@@ -30,7 +30,7 @@ categories:
   
   <b>Goal of the web</b>
   <ul style="margin-top: 0px;">
-    <li>Shared information space through which people and <span style="font-weight: bold; color:red; ">machines</span> could communicate</li>
+    <li>Shared information space through which people and <span style="font-weight: bold; color:red;">machines</span> could communicate</li>
     <ul>
       <li>Globally shared information space</li>
       <li>Machine analysis of work patterns, interactions and thoughts</li>
@@ -49,5 +49,5 @@ categories:
   <a href="/resources/The_World_Wide_Web.pdf">Full write-up here</a>
 
   <br />
-  <img class="float-left" src="/images/posts/memex.jpg" style="width: 300px; height: auto; margin-right: 10px">
+  <img class="float-left" src="/images/posts/memex.jpg" style="width: 300px; height: auto;">
 </div>

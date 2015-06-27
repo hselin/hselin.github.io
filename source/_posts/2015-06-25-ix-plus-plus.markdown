@@ -21,5 +21,5 @@ categories:
   <br />
   <br />
   <b>Latency vs Throughput</b>
-  <img src="/images/posts/ix++_latency_chart.png" style="width: 100%; height: auto; margin-right: 10px">
+  <img src="/images/posts/ix++_latency_chart.png" style="width: 100%; height: auto;">
 </div>

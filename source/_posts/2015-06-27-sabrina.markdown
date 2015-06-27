@@ -1,0 +1,51 @@
+---
+layout: post
+title: "Sabrina"
+date: 2015-06-27 02:36:24 -0700
+comments: true
+categories: 
+---
+
+<div style="overflow:auto">
+  Course project for <a href="http://cs294s.stanford.edu">CS 294S: Research Project in Software Systems and Security</a>. 
+  <br />
+  <br />
+  <b>Introduction</b>
+  <br />
+  Sabrina is an intelligent personal assistant that can help simplify your life. She can monitor events, perform actions and even control nearby devices on your behalf. Sabrina interacts with you through Omlet chat and gets to know you overtime. By taking care of all the little details, Sabrina enables you to focus on things that matter the most in your life...
+  <br />
+  <br />
+  <b>Overall framework</b>
+  <table style="width:100%; border-style: none; border-spacing: 50px; margin-top: 0px;">
+    <tr>
+      <td style="margin: 0px;"><img src="/images/posts/Rulepedia.png" style="width: 100%; height: auto;"></td>
+      <td><img src="/images/posts/Sabrina.png" style="width: 100%; height: auto;"></td> 
+    </tr>
+  </table>
+  <br />
+  <b>Project links</b>
+  <br />
+  <a href="https://vast-hamlet-6003.herokuapp.com/">Project website</a>
+  <br />
+  <a href="/resources/Sabrina_Poster.pdf">Poster</a>
+  <br />
+  <a href="/resources/Sabrina_Final_Report.pdf">Final report</a>
+  <br />
+  <br />
+  <b>TL;DR</b>
+  <br />
+  <span style="font-weight: bold; color:red;">Sabrina = Siri + XiaoBing + IoT + IFTTT</span>
+  <br />
+  <br />
+  <b>Concept + prototype video</b>
+  <br />
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/wYV210CyROY" frameborder="0" allowfullscreen style="margin-top: 0px;"></iframe>
+  <br />
+  <b>Project proposal</b>
+  <br />
+  <iframe src="https://docs.google.com/presentation/d/1NRr6eUPQ-D86pfjcNA2PfQzZaCHU5QQLo_UV_rmLmvo/embed?start=false&loop=false&delayms=0" frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" style="margin-top: 0px;"></iframe>
+  <br />
+  <b>Final progress report</b>
+  <br />
+  <iframe src="https://docs.google.com/presentation/d/1dT6UerwUmcwePs3PhN8jhbsyZhJZV5WmdrzS5LImTgA/embed?start=false&amp;loop=false&amp;delayms=0" frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" style="margin-top: 0px;"></iframe>
+</div>

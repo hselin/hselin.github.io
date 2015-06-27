@@ -25,5 +25,5 @@ categories:
   <iframe src="https://player.vimeo.com/video/109275030" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="margin-top: 0px;"></iframe>
   <br />
   <b>Low-fi Prototyping & Pilot Usability Testing</b>
-  <iframe src="https://docs.google.com/presentation/d/1IHg6FU_0lRwFgFxQo3oe5CXJjm7HFTq39mFR5cGb9rU/embed?start=false&loop=false&delayms=60000" frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" style="margin-top: 0px;"></iframe>
+  <iframe src="https://docs.google.com/presentation/d/1IHg6FU_0lRwFgFxQo3oe5CXJjm7HFTq39mFR5cGb9rU/embed?start=false&loop=false&delayms=0" frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" style="margin-top: 0px;"></iframe>
 </div>
