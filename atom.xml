@@ -4,7 +4,7 @@
   <title><![CDATA[Hselin]]></title>
   <link href="http://hselin.github.io/atom.xml" rel="self"/>
   <link href="http://hselin.github.io/"/>
-  <updated>2015-08-25T13:55:51-07:00</updated>
+  <updated>2015-08-25T14:59:44-07:00</updated>
   <id>http://hselin.github.io/</id>
   <author>
     <name><![CDATA[Albert Chen]]></name>
@@ -46,7 +46,13 @@
   SMR-Simulator is a simple tool that captures host software behavior and determines its “friendliness” to SMR technology. We hope SMR-Simulator will enable open source developers to experiment and become familiar with SMR functionalities and behaviors without the need to access real SMR (ZBC/ZAC) HW.
   <br />
   <br />
+  <b>Web site</b>
+  <br />
   <a href="https://github.com/westerndigitalcorporation/SMR-Simulator">https://github.com/westerndigitalcorporation/SMR-Simulator</a>
+  <br />
+  <b>Behavior expectations</b>
+  <br />
+  <a href="https://github.com/westerndigitalcorporation/SMR-Simulator/wiki/SMR-Simulator-Behavior-Expectations">https://github.com/westerndigitalcorporation/SMR-Simulator/wiki/SMR-Simulator-Behavior-Expectations</a>
   <br />
   <br />
   <img class="float-left" src="http://hselin.github.io/images/posts/magnetic_pole.png" style="width: 300px; height: auto;">
