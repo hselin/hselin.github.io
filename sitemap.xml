@@ -3,6 +3,12 @@
   
   
   <url>
+    <loc>http://hselin.github.io/blog/2015/08/23/host-managed-smr-simulator/</loc>
+    <lastmod>2015-08-23T11:37:24-07:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
     <loc>http://hselin.github.io/blog/2015/06/27/iot-security/</loc>
     <lastmod>2015-06-27T13:09:00-07:00</lastmod>
     <priority>0.8</priority>
@@ -65,42 +71,42 @@
   
   <url>
     <loc>http://hselin.github.io/archives/</loc>
-    <lastmod>2015-06-27T13:51:11-07:00</lastmod>
+    <lastmod>2015-08-25T13:53:46-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://hselin.github.io/blog/archives/</loc>
-    <lastmod>2015-06-27T13:51:11-07:00</lastmod>
+    <lastmod>2015-08-25T13:53:46-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://hselin.github.io/</loc>
-    <lastmod>2015-06-27T13:51:11-07:00</lastmod>
+    <lastmod>2015-08-25T13:53:46-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
     <loc>http://hselin.github.io/blog/</loc>
-    <lastmod>2015-06-27T13:51:11-07:00</lastmod>
+    <lastmod>2015-08-25T13:53:46-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://hselin.github.io/projects/</loc>
-    <lastmod>2015-06-27T13:51:11-07:00</lastmod>
+    <lastmod>2015-08-25T13:53:46-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://hselin.github.io/about/</loc>
-    <lastmod>2015-06-27T13:51:11-07:00</lastmod>
+    <lastmod>2015-08-25T13:53:46-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
