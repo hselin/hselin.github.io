@@ -9,7 +9,7 @@ categories:
 <div style="overflow:auto">
   <b>Introduction</b>
   <br />
-  "Any problem in computer science can be solved by another layer of <a href="https://en.wikipedia.org/wiki/Indirection">indirection</a>". Shingle Magnetic Recording (SMR) is no different - the only “difficulty” is in determining where to add the layer of indirection to enable maximum flexibility and efficiency. Basically, we want to insert an “SMR translation layer" that takes in random I/Os and outputs a sequential I/O stream. This layer could be implemented as a library, file system routine, driver, application or firmware - each with their own set of trade-offs. <span style="background-color:#FFFFCC;">In general, higher indirection/abstraction layers will have access to more semantic and system level information. This could lead to better performance and more room for innovation.</span> For example, the initiator application will have more knowledge about the importance and intent an I/O than firmware on the target device.
+  "Any problem in computer science can be solved by another layer of <a href="https://en.wikipedia.org/wiki/Indirection">indirection</a>". Shingle Magnetic Recording (SMR) is no different - the only “difficulty” is in determining where to add the layer of indirection to enable maximum flexibility and efficiency. Basically, we want to insert a “SMR translation layer" that takes in random I/Os and outputs a sequential I/O stream. This layer could be implemented as a library, file system routine, driver, application or firmware - each with their own set of trade-offs. <span style="background-color:#FFFFCC;">In general, higher indirection/abstraction layers will have access to more semantic and system level information. This could lead to better performance and more room for innovation.</span> For example, the initiator application will have more knowledge about the importance and intent of an I/O than firmware on the target device.
   <br />
   <br />
   <img class="" src="/images/posts/smr_translation_layer.png" style="width: 350px; height: auto; display: block; margin-left: auto; margin-right: auto">
@@ -21,7 +21,7 @@ categories:
   <b>Layers of SMR</b>
   <br />
   With these thoughts in mind, here are some approaches to enabling SMR.
-  The orange boxes indicate where the “SMR translation layer" could be implemented for the various solutions. As one can see from the diagram below, where “SMR translation layer" could be inserted vary across the spectrum depending on the hardware and software deployed.
+  The orange boxes indicate where the “SMR translation layer" could be implemented for the various solutions. As one can see from the diagram below, where “SMR translation layer" could be inserted varies across the spectrum depending on the hardware and software deployed.
   <br />
   <br />
   <img class="" src="/images/posts/smr_stack.png" style="width: 500px; height: auto; display: block; margin-left: auto; margin-right: auto">
@@ -37,7 +37,7 @@ categories:
     <li>
       <b>SMR software library</b>
       <br />
-      Companies with moderate level of software engineering capabilities could develop or modify their applications to utilize libraries (e.g. <a href="https://github.com/hgst/libzbc">libzbc</a>) that provide SMR support. However, this requires modification of all applications that require SMR and ecosystem support (library development). It also introduces the complexity of dealing with library API changes.
+      Companies with moderate level of software engineering capabilities could develop or modify their applications to utilize libraries (e.g. <a href="https://github.com/hgst/libzbc">libzbc</a>) that provide SMR support. However, this requires modification of all applications that use SMR and ecosystem support (library development). It also introduces the complexity of dealing with library API changes.
     </li>
     <br />
     <li>
@@ -49,18 +49,18 @@ categories:
     <li>
       <b>SMR driver</b>
       <br />
-      Going lower, we could build a SMR-aware block/filter driver. This will allow file systems to work transparently with SMR devices and requires no application change. At WD, we are currently working on a <a href="https://en.wikipedia.org/wiki/Device_mapper">device mapper</a> target to support Host Managed SMR devices (more on this in later posts). However, SMR awareness at this level may not provide as much efficiency and flexibility as compared to some of the previous use models. Additionally, we may be constrained by functionalities and limitations of layers below (e.g. libATA, miniports).
+      Going lower, we could build a SMR-aware block/filter driver. This allows file systems to work transparently with SMR devices and requires no application change. At WD, we are currently working on a <a href="https://en.wikipedia.org/wiki/Device_mapper">device mapper</a> target to support Host Managed SMR devices (more on this in later posts). However, SMR awareness at this level may not provide as much efficiency and flexibility as compared to some of the previous use models. Additionally, we may be constrained by functionalities and limitations of layers below (e.g. libATA, miniports).
     </li>
     <br />
     <li>
       <b>Device Managed SMR</b>
       <br />
-      Finally, we could always punt the work of managing SMR behavior to the device. After all, device manufacturers are the storage experts and they "created" this problem in the first place! By implementing SMR handling at the lowest level, file systems and applications will work transparently with SMR devices - from the host perspective, a Device Managed SMR drive works exactly like a conventional <a href="https://en.wikipedia.org/wiki/Perpendicular_recording drive">PMR</a> drive. Have we found a panacea to our SMR problem? Maybe. It depends on our usage model and performance expectations. For example, just how "transparent" is this solution? Unlike traditional drives - the performance characteristics of a Device Managed SMR drive might change as we fill it to capacity (at some point read-modify-write will be required to change device contents). Can applications really transparently deal with this behavior? Furthermore, this "transparency" comes at a cost - in terms of performance, flexibility and scalability.
+      Finally, we could always punt the work of managing SMR behavior to the device. After all, device manufacturers are the storage experts and they "created" this problem in the first place! By implementing SMR handling at the lowest level, file systems and applications will work transparently with SMR devices - from the host perspective, a Device Managed SMR drive works exactly like a conventional <a href="https://en.wikipedia.org/wiki/Perpendicular_recording drive">PMR</a> drive. Have we found a panacea to our SMR problem? Maybe. It depends on our usage model and performance expectations. For example, just how "transparent" is this solution? Unlike traditional drives - the performance characteristics of a Device Managed SMR drive may change as we fill it to capacity (at some point read-modify-write will be required to change device contents). Can applications really transparently deal with this behavior? Furthermore, this "transparency" comes at a cost - in terms of performance, flexibility and scalability.
       <br />
       <br />
       <ul style="margin-top: 0px;">
         <li>
-          Performance - at the device level, only limited amount of semantic information are available from the host. It is up to the device to interpret the meaning and importance of each read and write command. This limits the amount of optimization that could be implemented. For example, the device might kick off a garbage collection process while the host is busy flushing important data to disk; and an application can experience drastically different I/O completion times while executing the same operation.
+          Performance - at the device level, only limited amount of semantic information is available from the host. It is up to the device to interpret the meaning and importance of each read and write command. This limits the amount of optimization that could be implemented. For example, the device might kick off a garbage collection process while the host is busy flushing important data to disk; and an application can experience drastically different I/O completion times while executing the same operation.
         </li>
         <br />
         <li>
@@ -78,5 +78,5 @@ categories:
   <br />
   <b>Conclusion</b>
   <br />
-  It is worth to keep in mind that SMR is not a "feature" for the end-user (unless you really want a <a href="https://en.wikipedia.org/wiki/Write_once_read_many">WORM</a> drive), it is a capacity enabler for device manufacturers. No user is willing to pay extra just to have SMR. The benefits of having SMR must greatly outweigh the cost of its adoption for us to see significant espousal in developing and modifying software and hardware to be SMR-aware/friendly. As we've seen, SMR adoption is a complex problem. It cannot be solved by a single vendor or in a single layer, it requires the whole ecosystem to work together to build a comprehensive solution for all use cases.
+  Fundamentally, SMR is not a "feature" for the end-user (unless you really want a <a href="https://en.wikipedia.org/wiki/Write_once_read_many">WORM</a> drive), it is a capacity enabler for device manufacturers. No user is willing to pay extra just to have SMR. The benefits of having SMR must greatly outweigh the cost of its adoption for us to see significant espousal in developing and modifying software and hardware to be SMR-aware/friendly. As we've seen, SMR adoption is a complex problem. It cannot be solved by a single vendor or in a single layer; it requires the whole ecosystem to work together to build a comprehensive solution for all use cases.
 </div>
