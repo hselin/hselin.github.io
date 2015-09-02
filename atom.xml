@@ -4,7 +4,7 @@
   <title><![CDATA[Hselin]]></title>
   <link href="http://hselin.github.io/atom.xml" rel="self"/>
   <link href="http://hselin.github.io/"/>
-  <updated>2015-09-01T15:53:50-07:00</updated>
+  <updated>2015-09-01T18:02:29-07:00</updated>
   <id>http://hselin.github.io/</id>
   <author>
     <name><![CDATA[Albert Chen]]></name>
@@ -90,7 +90,7 @@
   <br />
   <b>Conclusion</b>
   <br />
-  It is worth to keep in mind that SMR is not a &#8220;feature&#8221; for the end-user (unless you really want a <a href="https://en.wikipedia.org/wiki/Write_once_read_many">WORM</a> drive), it is a capacity enabler for device manufacturers. No user are willing to pay extra just to have SMR. The benefits of having SMR must greatly outweigh the cost of its adoption for us to see significant espousal in developing and modifying software and hardware to be SMR-aware/friendly. As we&#8217;ve seen, SMR adoption is a complex problem. It cannot be solved by a single vendor or in single a layer, it requires the whole ecosystem to work together to build a comprehensive solution for all use cases.
+  It is worth to keep in mind that SMR is not a &#8220;feature&#8221; for the end-user (unless you really want a <a href="https://en.wikipedia.org/wiki/Write_once_read_many">WORM</a> drive), it is a capacity enabler for device manufacturers. No user is willing to pay extra just to have SMR. The benefits of having SMR must greatly outweigh the cost of its adoption for us to see significant espousal in developing and modifying software and hardware to be SMR-aware/friendly. As we&#8217;ve seen, SMR adoption is a complex problem. It cannot be solved by a single vendor or in a single layer, it requires the whole ecosystem to work together to build a comprehensive solution for all use cases.
 </div>
 
 ]]></content>
