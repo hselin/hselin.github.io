@@ -10,7 +10,7 @@
 
 <meta name="author" content="Albert Chen"> 
 
-<meta name="description" content="It&#8217;s been 3 month since HeartBleed was publicly disclosed. According to Wikipedia ~17% of secure web servers were believed to be vulnerable. &hellip;"> <meta name="keywords" content="">
+<meta name="description" content="CS344G: (Your) Great Ideas for Networked Applications class project. Introduction IX++ is an extension of the IX Dataplane Operating System that &hellip;"> <meta name="keywords" content="">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -101,22 +101,27 @@ $(document).ready(
     <article class="post">
 	<h2 class="title">
 		
-		<a href="/blog/2014/07/09/code-diversity/">
+		<a href="/blog/2015/06/25/ix-plus-plus/">
 		
-			Code Diversity</a>
+			IX++</a>
 	</h2>
 	<div class="entry-content">
 		<div style="overflow:auto">
-  <img class="float-left" src="/images/posts/bones.jpg" style="width: 200px; height: 200px; margin-right: 10px">
-  It&#8217;s been 3 month since <a href="http://en.wikipedia.org/wiki/Heartbleed">HeartBleed</a> was publicly disclosed.
-  According to Wikipedia ~17% of secure web servers were believed to be vulnerable.
+  <a href="http://cs344g.stanford.edu">CS344G: (Your) Great Ideas for Networked Applications</a> class project. 
   <br />
   <br />
-  That makes me wonder - what is the affect of our increasing reliance on a few well known libraries for application functionalities?
-  Will this limit the &#8220;genetic diversity&#8221; of our software ecosystem?
+  <b>Introduction</b>
+  <br />
+  IX++ is an extension of the IX Dataplane Operating System that uses PCI Single Root I/O Virtualization (SR-IOV) to run multiple networked applications concurrently with minimal interference. The original IX ran alongside Linux and required a dedicated physical network interface card (NIC) for each multi-threaded IX application, as well as one for Linux. In IX++, each multi-threaded application is instead given its own virtual NIC through SR-IOV, and Linux can run concurrently on the physical NIC. In brief, the original IX required a dedicated NIC for Linux and one NIC per IX application while IX++ uses NIC virtualization to allow Linux and multiple IX applications to multiplex a single physical NIC. In this paper we describe the implementation of IX++ and demonstrate its significant performance advantages over Linux when running concurrent networked applications. We also show that using different Linux Traffic Control Queuing Disciplines can help, but not close, this performance advantage.
   <br />
   <br />
-  On one hand, as long as we take good care of our libraries this reduces the amount of development, test, and inter-op costs and also prevents amateur mistakes. It&#8217;s akin to putting our eggs in a few selected baskets and taking good care of them (I stole this phrase from Prof. Cheriton). But what happens when you drop a basket? A major bug in a library could have devastating results for the whole ecosystem as it might be used by a significant number of applications.
+  <a href="/resources/ix++_final_presentation.pdf">Project presentation</a>
+  <br />
+  <a href="/resources/CS344g_ixplusplus_final paper.pdf">Read project report here</a>
+  <br />
+  <br />
+  <b>Latency vs Throughput</b>
+  <img src="/images/posts/ix++_latency_chart.png" style="width: 100%; height: auto;">
 </div>
 
 
@@ -138,12 +143,12 @@ $(document).ready(
   
 
 
-<time datetime="2014-07-09T17:16:38-07:00" pubdate data-updated="true">Wednesday 07.09.14</time></div>
+<time datetime="2015-06-25T16:21:16-07:00" pubdate data-updated="true">Thursday 06.25.15</time></div>
 	
 
 
 	
-		<span class="comments"><a href="/blog/2014/07/09/code-diversity//2/index.html#disqus_thread">Comments</a></span>
+		<span class="comments"><a href="/blog/2015/06/25/ix-plus-plus//2/index.html#disqus_thread">Comments</a></span>
 	
 </div></article>
 
@@ -151,12 +156,33 @@ $(document).ready(
     <article class="post">
 	<h2 class="title">
 		
-		<a href="/blog/2014/06/24/test-title/">
+		<a href="/blog/2015/06/25/ola-diabetes-care/">
 		
-			Test Title</a>
+			Ola Diabetes Care</a>
 	</h2>
 	<div class="entry-content">
-		<p>Hello World!</p>
+		<div style="overflow:auto">
+  <a href="http://cs147.stanford.edu">CS 147: HCI+D</a> class project. 
+  <br />
+  <br />
+  <b>Introduction</b>
+  <br />
+  Ola is a system (smartphone application + wearable pod) that provides real-time context-aware care for diabetic patients by using smart wearable devices and advanced data analytics.
+  <br />
+  <br />
+  <a href="http://hci.stanford.edu/courses/cs147/2014/au/projects/information/ola/index.html">Project website</a>
+  <br />
+  <a href="http://stanford.edu/class/cs194h/projects/ola/finalreport.pdf">Read project report here</a>
+  <br />
+  <br />
+  <b>Concept video</b>
+  <br />
+  <iframe src="https://player.vimeo.com/video/109275030" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="margin-top: 0px;"></iframe>
+  <br />
+  <b>Low-fi Prototyping & Pilot Usability Testing</b>
+  <iframe src="https://docs.google.com/presentation/d/1IHg6FU_0lRwFgFxQo3oe5CXJjm7HFTq39mFR5cGb9rU/embed?start=false&loop=false&delayms=0" frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" style="margin-top: 0px;"></iframe>
+</div>
+
 
 		
 		
@@ -176,12 +202,196 @@ $(document).ready(
   
 
 
-<time datetime="2014-06-24T22:55:50-07:00" pubdate data-updated="true">Tuesday 06.24.14</time></div>
+<time datetime="2015-06-25T02:31:42-07:00" pubdate data-updated="true">Thursday 06.25.15</time></div>
 	
 
 
 	
-		<span class="comments"><a href="/blog/2014/06/24/test-title//2/index.html#disqus_thread">Comments</a></span>
+		<span class="comments"><a href="/blog/2015/06/25/ola-diabetes-care//2/index.html#disqus_thread">Comments</a></span>
+	
+</div></article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/08/26/3rd-party-cookies/">
+		
+			3rd-party Cookies</a>
+	</h2>
+	<div class="entry-content">
+		<div style="overflow:auto">
+  <a href="http://cs142.stanford.edu">CS142: Web Applications</a> writing assignment. 
+  <br />
+  <br />
+  Should browsers <i>disable</i> or <i>enable</i> 3rd-party cookies by default?
+  <br />
+  <br />
+  <b>Introduction</b>
+  <br />
+  While third-party cookies enable new web functionalities, it can also expose users’ browsing 
+  history without users’ awareness. A person’s web history inevitably reveals personal 
+  information, which could be maliciously exploited for economical and/or psychological harm.
+  Furthermore, users’ obliviousness impedes the use of market force to regulate these third 
+  parties. To address this ecosystem deficiency, browsers should disable third-party cookies by 
+  default – requiring users to explicitly &#8220;opt-in&#8221;. 
+  <br />
+  <br />
+  <br />
+  <img class="float-left" src="/images/posts/cookies.png" style="width: 200px; height: 100px; margin-right: 10px">
+  <br />
+  <br />
+  <a href="/resources/cs142-hselin-htyen-writing.pdf">Full write-up here</a>
+</div>
+
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-08-26T17:30:14-07:00" pubdate data-updated="true">Tuesday 08.26.14</time></div>
+	
+
+
+	
+		<span class="comments"><a href="/blog/2014/08/26/3rd-party-cookies//2/index.html#disqus_thread">Comments</a></span>
+	
+</div></article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/07/30/i-dont-know/">
+		
+			I Don&#8217;t Know</a>
+	</h2>
+	<div class="entry-content">
+		<div style="overflow:auto">
+  <img class="float-left" src="/images/posts/unknown.jpg" style="width: 130px; height: 200px; margin-right: 10px">
+  An interesting thing happened today at work.
+  <br />
+  <br />
+  There was a company wide all-hands meeting this evening, this is where the executives review our past quarter performance and reveal the all important number that everyone is most interested in - the bonus payout percentage. However, it is not the bonus payout percentage that is interesting&#8230; what caught my attention is a quick, short comment made by the CEO which could be paraphrased into: a CEO should not say &#8220;I don&#8217;t know&#8221;.
+  <br />
+  <br />
+  It took me by surprise, as I am trying to learn to say &#8220;I don&#8217;t know&#8221; more often!
+  You know what I mean - it is really hard to say/admit &#8220;I don&#8217;t know&#8221; at work as there is almost always a pressure to deliver some kind of an answer or to look good/save face in a meeting. Sometimes it is ignorance and sometimes it is just not enough available information - but I believe saying &#8220;I don&#8217;t know&#8221; is one of the most honest, courageous and confident action one can make. I would rather see a leader readily admits to his/her lack of understanding than for a facade of omniscience.
+  <br />
+  <br />
+  “Stay hungry, stay young, stay foolish, stay curious, and above all, stay humble because just when you think you got all the answers, is the moment when some bitter twist of fate in the universe will remind you that you very much don&#8217;t.” ― Tom Hiddleston 
+</div>
+
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-07-30T23:24:31-07:00" pubdate data-updated="true">Wednesday 07.30.14</time></div>
+	
+
+
+	
+		<span class="comments"><a href="/blog/2014/07/30/i-dont-know//2/index.html#disqus_thread">Comments</a></span>
+	
+</div></article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/07/23/ios-xmlhttprequest-and-video/">
+		
+			iOS, XMLHttpRequest and Video</a>
+	</h2>
+	<div class="entry-content">
+		<div style="overflow:auto">
+  <img class="float-left" src="/images/posts/apple-logo.png" style="width: 200px; height: 100px; margin-right: 10px">
+  So&#8230; Safari on iOS <a href="http://caniuse.com/video ">supports</a> HTML5 video element. That&#8217;s great, good job Apple.
+  <br />
+  BUT - why can&#8217;t you take the extra step of allowing the video element to work with blob object URL as the source?!
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'>  <span class="kd">var</span> <span class="nx">oReq</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span>
+</span><span class='line'>  <span class="nx">oReq</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="nx">URL</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+</span><span class='line'>  <span class="nx">oReq</span><span class="p">.</span><span class="nx">responseType</span> <span class="o">=</span> <span class="s2">&quot;blob&quot;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nx">oReq</span><span class="p">.</span><span class="nx">onreadystatechange</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">if</span><span class="p">((</span><span class="nx">oReq</span><span class="p">.</span><span class="nx">readyState</span> <span class="o">==</span> <span class="mi">4</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="nx">oReq</span><span class="p">.</span><span class="nx">status</span> <span class="o">==</span> <span class="mi">200</span><span class="p">))</span> <span class="p">{</span>
+</span><span class='line'>      <span class="kd">var</span> <span class="nx">blobURL</span> <span class="o">=</span> <span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">URL</span> <span class="o">||</span> <span class="nb">window</span><span class="p">.</span><span class="nx">webkitURL</span><span class="p">).</span><span class="nx">createObjectURL</span><span class="p">(</span><span class="nx">oReq</span><span class="p">.</span><span class="nx">response</span><span class="p">);</span>
+</span><span class='line'>      <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#myVideo&quot;</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&quot;src&quot;</span><span class="p">,</span> <span class="nx">blobURL</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nx">oReq</span><span class="p">.</span><span class="nx">send</span><span class="p">();</span>
+</span></code></pre></td></tr></table></div></figure>
+  
+</div>
+
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-07-23T14:30:33-07:00" pubdate data-updated="true">Wednesday 07.23.14</time></div>
+	
+
+
+	
+		<span class="comments"><a href="/blog/2014/07/23/ios-xmlhttprequest-and-video//2/index.html#disqus_thread">Comments</a></span>
 	
 </div></article>
 
@@ -189,6 +399,8 @@ $(document).ready(
     
         <a href="/index.html" class="prev">Prev</a>
     
+    
+        <a href="/3" class="next">Next</a>
     
     <div class="center"><a href="/archives">Blog Archives</a></div>
 </nav></div>
