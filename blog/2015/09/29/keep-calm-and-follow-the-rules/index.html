@@ -1,0 +1,236 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<script data-cfasync="false" type="text/javascript" src="//use.typekit.net/axj3cfp.js"></script>
+	<script data-cfasync="false" type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	<meta charset="utf-8">
+	<!-- <title>Keep Calm and Follow The Rules  | Hselin</title> -->
+	<title>Keep Calm and Follow The Rules</title>
+
+<meta name="author" content="Albert Chen"> 
+
+<meta name="description" content="The problem with Host Managed SMR Host Managed SMR devices must be accessed using either Zoned Access (ATA) or Zoned Block (SCSI) command sets which &hellip;"> <meta name="keywords" content="">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Hselin" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/images/favicon-32x32.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="/stylesheets/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="/javascripts/jquery.fancybox.pack.js"></script>
+
+<script language="Javascript" type="text/javascript">
+$(document).ready(
+  function() {
+    (function($) {
+      $(".fancybox[data-content-id]").each(function() {
+        this.href = $(this).data('content-id');
+      });
+      $(".fancybox").fancybox({
+        beforeLoad: function() {
+          var el, 
+              id = $(this.element).data('title-id');
+
+          if (id) {
+            el = $('#' + id);
+
+            if (el.length) {
+              this.title = el.html();
+            }
+          }
+          if ($(this).data('content')) {
+            this.content = $(this).data('content');
+          }
+        },
+        helpers: {
+          title: {
+            type: 'inside'
+          }
+        }
+      });
+    })(jQuery);
+  }
+);
+</script>
+
+	
+</head>
+
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">Hselin</a></h1>
+<h4></h4>
+<nav id="main-nav"><ul>
+  <li><a href="/about">About</a></li>
+  <li><a href="/">Random Musings</a></li>
+  <li><a href="/projects">Projects</a></li>
+</ul>
+</nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"><ul>
+  <li><a href="/about">About</a></li>
+  <li><a href="/">Random Musings</a></li>
+  <li><a href="/projects">Projects</a></li>
+</ul>
+</div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="https://www.google.com/search" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:hselin.github.io">
+			</form>
+		</div>
+	</div>
+</nav>
+
+
+</header>
+
+	<div id="content" class="inner"><article class="post">
+	<h2 class="title">Keep Calm and Follow the Rules</h2>
+	<div class="entry-content"><div style="overflow:auto">
+  <b>The problem with Host Managed SMR</b>
+  <br />
+  Host Managed SMR devices must be accessed using either Zoned Access (ATA) or Zoned Block (SCSI) command sets which restrict I/O operations that could be sent from the host. This results in simplified device implementation and behavior - as we shifted the burden of shingled writing to host software. <del>Hopefully</del> It is expected, that the host will have access to more compute resources (e.g. memory) and semantic/system-level information than a low-level storage device.
+  <br />
+  <br />
+  <img class="" src="/images/posts/keep_calm_and_follow_the_rules/keep_calm_and_follow_the_rules.png" style="width: 30%; height: auto; display: block; margin-left: auto; margin-right: auto">
+  <br />
+  <br />
+  <b>Restrictions</b>
+  <br />
+  Below is a list of major I/O restrictions that ZAC and ZBC enforces on the host.
+  <br />
+  <span style="background: yellow;">Nonconforming I/O operations will be failed by the device.</span>
+  <br />
+  <br />
+  <li>Sequential write - writes have to start at zone Write Pointer (WP)</li>
+  <li>Zone WPs could be reset (to the zone&#8217;s starting LBA) by issuing a RESET WRITE POINTER command</li>
+  <li>Writes have to be 4K aligned in SMR zones</li>
+  <li>Reads cannot start or extend beyond the zone WP</li>
+  <li>Read/Write commands cannot span zones (some exceptions may apply)</li>
+  <br />
+  Zone WPs are kept and maintained by the device, they are used to keep host write sequential so we don&#8217;t accidentally wipe-out already written data. After each successful write, the associated zone WP is advanced to the next &#8220;unwritten&#8221; location within the zone (i.e. largest LBA written + 1).
+  <br /> 
+  <br />
+  Here are some concrete examples of the above I/O rules.
+  <br />
+  <br />
+  <img class="" src="/images/posts/keep_calm_and_follow_the_rules/smr_rules.png" style="width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto">  
+  <br />
+  1. <span style="color: red;">Not allowed - write commands cannot start before zone WP.</span>
+  <br />
+  2. <span style="color: green;">Allowed - write commands must start at zone WP.</span>
+  <br />
+  3. <span style="color: green;">Allowed - write commands must start and end in the same zone.</span>
+  <br />
+  4. <span style="color: red;">Not allowed - write commands cannot spans multiple zones.</span>
+  <br />
+  5. <span style="color: red;">Not allowed - write commands cannot start after zone WP.</span>
+  <br />
+  6. <span style="color: green;">Allowed - read commands must start and end before zone WP.</span>
+  <br />
+  7. <span style="color: green;">Allowed - read commands can span up to LBA (zone WP - 1).</span>
+  <br />
+  8. <span style="color: red;">Not allowed - read commands cannot span multiple zones.</span>
+  <br />
+  9. <span style="color: red;">Not allowed - read commands cannot start on zone WP.</span>
+  <br />
+  10. <span style="color: red;">Not allowed - read commands cannot start after zone WP.</span>
+  <br />
+  <br />
+  In the next <a href="/blog/2015/10/06/keep-calm-and-break-rules/">post</a> I&#8217;ll talk about why <span style="background: yellow;">we should break some of these rules for efficiency.</span>
+</div>
+
+</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-09-29T16:29:25-07:00" pubdate data-updated="true">Tuesday 09.29.15</time></div>
+	
+
+
+	
+		<span class="comments"><a href="/blog/2015/09/29/keep-calm-and-follow-the-rules/#disqus_thread">Comments</a></span>
+	
+</div></article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+<!---	<a class="addthis_counter addthis_pill_style"></a> --->
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+
+
+<section id="comment">
+    <h2 class="title">Comments</h2>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+</div>
+	<footer id="footer" class="inner">Copyright &copy; 2015
+
+    Albert Chen
+
+</footer>
+	<script src="/javascripts/slash.js">
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'hselin';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://hselin.github.io/blog/2015/09/29/keep-calm-and-follow-the-rules/';
+        var disqus_url = 'http://hselin.github.io/blog/2015/09/29/keep-calm-and-follow-the-rules/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+</body>
+</html>
