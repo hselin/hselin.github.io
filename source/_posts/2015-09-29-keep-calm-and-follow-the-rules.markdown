@@ -6,9 +6,9 @@ comments: true
 categories: 
 ---
 <div style="overflow:auto">
-  <b>The problem with Host Managed SMR</b>
+  <b>Accessing Host Managed SMR devices</b>
   <br />
-  Host Managed SMR devices must be accessed using either Zoned Access (ATA) or Zoned Block (SCSI) command sets which restrict I/O operations that could be sent from the host. This results in simplified device implementation and behavior - as we shifted the burden of shingled writing to host software. <del>Hopefully</del> It is expected, that the host will have access to more compute resources (e.g. memory) and semantic/system-level information than a low-level storage device.
+  Host Managed SMR devices must be accessed using either Zoned Access (ATA) or Zoned Block (SCSI) command sets, which restrict I/O operations that could be sent from the host. This results in simplified device implementation and behavior - as we shifted the burden of shingled writing to host software. <del>Hopefully</del> It is expected, that the host will have access to more compute resources (e.g. memory) and semantic/system-level information than a low-level storage device.
   <br />
   <br />
   <img class="" src="/images/posts/keep_calm_and_follow_the_rules/keep_calm_and_follow_the_rules.png" style="width: 30%; height: auto; display: block; margin-left: auto; margin-right: auto">
@@ -16,7 +16,7 @@ categories:
   <br />
   <b>Restrictions</b>
   <br />
-  Below is a list of major I/O restrictions that ZAC and ZBC enforces on the host.
+  Below is a list of major I/O restrictions that ZAC and ZBC enforce on the host.
   <br />
   <span style="background: yellow;">Nonconforming I/O operations will be failed by the device.</span>
   <br />
@@ -41,7 +41,7 @@ categories:
   <br />
   3. <span style="color: green;">Allowed - write commands must start and end in the same zone.</span>
   <br />
-  4. <span style="color: red;">Not allowed - write commands cannot spans multiple zones.</span>
+  4. <span style="color: red;">Not allowed - write commands cannot span multiple zones.</span>
   <br />
   5. <span style="color: red;">Not allowed - write commands cannot start after zone WP.</span>
   <br />
