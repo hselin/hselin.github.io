@@ -4,7 +4,7 @@
   <title><![CDATA[Hselin]]></title>
   <link href="http://hselin.github.io/atom.xml" rel="self"/>
   <link href="http://hselin.github.io/"/>
-  <updated>2015-10-25T15:44:42-07:00</updated>
+  <updated>2015-10-25T16:55:41-07:00</updated>
   <id>http://hselin.github.io/</id>
   <author>
     <name><![CDATA[Albert Chen]]></name>
@@ -90,7 +90,7 @@
   <br />
   <b>Conclusion</b>
   <br />
-  As mentioned <a href="http://hselin.github.io/blog/2015/08/26/another-layer-of-indirection/">previously</a> - SMR is not a “feature” that will directly benefit the end-user. The benefits of having SMR must greatly outweigh the cost of its adoption. It behooves the storage vendors to make the transition to SMR as easily and as efficiently possible.
+  As mentioned <a href="http://hselin.github.io/blog/2015/08/26/another-layer-of-indirection/">previously</a> - the benefits of having SMR must greatly outweigh the cost of its adoption. It is essential that storage vendors provide an easy and efficient transition path to SMR. Sometimes that means breaking some rules along the way.
 </div>
 
 ]]></content>
