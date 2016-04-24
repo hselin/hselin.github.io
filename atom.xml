@@ -4,7 +4,7 @@
   <title><![CDATA[Hselin]]></title>
   <link href="http://hselin.github.io/atom.xml" rel="self"/>
   <link href="http://hselin.github.io/"/>
-  <updated>2016-02-01T05:15:28-08:00</updated>
+  <updated>2016-04-23T21:13:05-07:00</updated>
   <id>http://hselin.github.io/</id>
   <author>
     <name><![CDATA[Albert Chen]]></name>
@@ -12,6 +12,323 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[OpenIoT Summit 2016]]></title>
+    <link href="http://hselin.github.io/blog/2016/04/23/openiot-summit-2016/"/>
+    <updated>2016-04-23T19:17:36-07:00</updated>
+    <id>http://hselin.github.io/blog/2016/04/23/openiot-summit-2016</id>
+    <content type="html"><![CDATA[<div style="overflow:auto">
+  <img class="" src="http://hselin.github.io/images/posts/openiot_summit_2016/iot.png" style="width: 75%; height: auto; display: block; margin-left: auto; margin-right: auto">
+  <br />
+  <br />
+  Below are my rough notes and thoughts from Linux Foundation&#8217;s OpenIoT Summit April 4 - 6 in San Diego
+  <br />
+  <br />
+  <b>Summary</b>
+  <br />
+  IoT is all about communication (between devices and to the cloud) and its impact on revenue (where value-added computation/control is located).
+  Most IoT devices today operate in silos, independent of each other (e.g. Nest, Fitbit). This “island of devices” model can help companies capture brand “loyalty” and potential continuous revenue streams at a cost of bad user experience/freedom (e.g. iOS and Apple app store). In a way, this is similar to how the Internet <a href="http://hselin.com/blog/2015/06/26/the-world-wide-web/">operated</a> before the advent of HTTP and HTML (e.g. silos of information separated by incompatible protocols, networks and data formats).
+  <br />
+  <br />
+  Unfortunately, the above situation is not the result from a lack of standard IoT protocols and frameworks.
+  In fact, it is the very opposite – there are actually too many standards/protocols that claim to be open and as the only interoperability solution!
+  This results in confusion and wasted efforts in the IoT ecosystem as companies spend more time and resource working on supporting various IoT standards rather than their value differentiator. This confusion is further propagated when Qualcomm - the founding member of Alljoyn (Allseen alliance) decided to support the &#8220;rival framework&#8221; IoTivity (OIC/OCF) as well.
+  <br />
+  <br />
+  Most of the companies at the conference prefer proximal rather than cloud control of IoT devices as it puts up a potential walled garden.
+  However, this maybe a biased view as none of the companies that presented own a significant IoT cloud market share (like Google or Fitbit).
+  <br />
+  <br />
+  Finally, there was a lot of concern about security. Linus Torvalds and others spoke frequently on the <a href="https://www.schneier.com/essays/archives/2014/01/the_internet_of_thin.html">&#8220;unpatchable”</a> nature of IoT which presents a significant security risk, as IoT devices are &#8220;real physical devices” rather than just software applications.
+  <br />
+  <br />
+  Obligatory <a href="https://www.xkcd.com">xkcd</a>
+  <img class="" src="http://hselin.github.io/images/posts/openiot_summit_2016/standards.png" style="width: 45%; height: auto; display: block; margin-left: auto; margin-right: auto">
+  <br />
+  <br />
+  <b>Notes</b>
+  <br />
+  <u>IOT transports and frameworks</u>  
+  <ul style="margin-top: 0px;">
+    <li>
+      Transports
+      <ul style="margin-top: 0px;">
+        <li>
+          Wifi
+          <ul style="margin-top: 0px;">
+            <li>
+              Ubiquitous
+            </li>
+            <li>
+              Good range & BW
+            </li>
+            <li>
+              High cost and power
+            </li>
+          </ul>
+        </li>
+        <li>
+          Bluetooth smart (low energy)
+          <ul style="margin-top: 0px;">
+            <li>
+              Standard on most mobile devices
+            </li>
+            <li>
+              Low BW
+            </li>
+            <li>
+              Medium range
+            </li>
+            <li>
+              Low cost and power
+            </li>
+            <li>
+              Mesh network is coming
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          Zigbee
+          <ul style="margin-top: 0px;">
+            <li>
+              802.15.4
+            </li>
+            <li>
+              Low range & BW
+            </li>
+            <li>
+              Low power
+            </li>
+            <li>
+              Very low cost
+            </li>
+            <li>
+              Mesh network
+            </li>
+            <li>
+              Known to have interoperability and interference problems
+            </li>
+          </ul>
+        </li>
+
+         <li>
+          Zwave
+          <ul style="margin-top: 0px;">
+            <li>
+              Proprietary
+            </li>
+            <li>
+              Low BW
+            </li>
+            <li>
+              Medium range
+            </li>
+            <li>
+              Low power
+            </li>
+            <li>
+              Very low cost
+            </li>
+            <li>
+              Mesh network
+            </li>
+          </ul>
+        </li>
+
+
+        <li>
+          Thread
+          <ul style="margin-top: 0px;">
+            <li>
+              802.15.4 + 6LoWPAN (IP addressable)
+            </li>
+            <li>
+              Low BW
+            </li>
+            <li>
+              Medium range
+            </li>
+            <li>
+              Low power
+            </li>
+            <li>
+              Low cost
+            </li>
+            <li>
+              Mesh network
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          EnOcean
+          <ul style="margin-top: 0px;">
+            <li>
+              Ultra low BW
+            </li>
+            <li>
+              Energy harvesting - no power consumption
+            </li>
+            <li>
+              Medium range
+            </li>
+            <li>
+              Low cost
+            </li>
+            <li>
+              Requires special antenna
+            </li>
+          </ul>
+        </li>         
+      </ul>
+    </li>
+    <li>
+      Frameworks
+      <ul style="margin-top: 0px;">
+
+        <li>
+          IoTivity (OIC/OCF)
+          <ul style="margin-top: 0px;">
+            <li>
+              CoAP (REST model)
+            </li>
+            <li>
+              <img class="" src="http://hselin.github.io/images/posts/openiot_summit_2016/IoTivity_framework.png" style="width: 60%; height: auto; display: block; margin-left: 0; margin-right: auto">
+            </li>
+            <li>
+              <img class="" src="http://hselin.github.io/images/posts/openiot_summit_2016/IoTivity_framework2.png" style="width: 60%; height: auto; display: block; margin-left: 0; margin-right: auto">
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          AllJoyn (AllSeen Alliance)
+          <ul style="margin-top: 0px;">
+            <li>
+              Started as Qualcomm project - now a Linux foundation project
+            </li>
+            <li>
+              D-BUS with RPC/RMI model
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          HomeKit (Apple)
+          <ul style="margin-top: 0px;">
+            <li>
+              Walled garden - requires MFi chip
+            </li>
+            <li>
+              Not widely adopted
+            </li>
+            <li>
+              No killer app from Apple
+            </li>
+            <li>
+              <img class="" src="http://hselin.github.io/images/posts/openiot_summit_2016/HomeKit_framework.png" style="width: 60%; height: auto; display: block; margin-left: 0; margin-right: auto">
+            </li>
+          </ul>
+        </li>
+
+
+       <li>
+          Google Weave
+          <ul style="margin-top: 0px;">
+            <li>
+              Heavy coupled with Google cloud
+            </li>
+            <li>
+              REST model
+            </li>
+            <li>
+              WiFi and BLE
+            </li>
+            <li>
+              Different from Nest Weave
+            </li>
+          </ul>
+        </li>
+
+
+      </ul>
+    </li>
+  </ul>
+  <u>MQTT</u>
+  <ul style="margin-top: 0px;">
+    <li>
+      Lightweight pub/sub protocol (store and forward) with reliable bidirectional message delivery
+    </li>
+    <li>
+      Runs on top of TCP/IP (some variant can run on non-TCP/IP network)
+    </li>
+    <li>
+      QoS includes:
+      <ul style="margin-bottom: 0px;">
+        <li>
+          0 - at most once
+        </li>
+        <li>
+          1 - at least once
+        </li>
+        <li>
+          2 - exactly once
+        </li>
+      </ul>
+    </li>
+    <li>
+      Used by FB messenger
+    </li>
+  </ul>
+
+  <u>IoT Programming Model</u>
+  <ul style="margin-top: 0px;">
+    <li>
+      Local/proximal control/orchestration
+      <ul style="margin-bottom: 0px;">
+        <li>
+          Lower latency
+        </li>
+        <li>
+          Data stays local (privacy + security)
+        </li>
+        <li>
+          Fog model (where data collection and preprocessing is done by border gateway devices)
+        </li>
+      </ul>
+    </li>
+    <li>
+      IoT frameworks (from lower level to higher)
+      <ul style="margin-bottom: 0px;">
+        <li>
+          Zephyr (RTOS for IoT) - for devices too small to run Linux<br/>
+          Ostro - IoT Linux (built using Yocto)
+        </li>
+        <li>
+          Soletta - yet another IoT API framework
+        </li>
+        <li>
+          MRAA library
+        </li>
+        <li>
+          Intel IoT services orchestration layer
+        </li>
+      </ul>
+    </li>
+  </ul>
+  
+
+
+
+
+</div>
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Keep Calm and Break Rules]]></title>
