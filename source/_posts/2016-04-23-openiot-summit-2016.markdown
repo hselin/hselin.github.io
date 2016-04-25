@@ -10,7 +10,7 @@ categories:
   <img class="" src="/images/posts/openiot_summit_2016/iot.png" style="width: 75%; height: auto; display: block; margin-left: auto; margin-right: auto">
   <br />
   <br />
-  Below are some rough notes and thoughts from Linux Foundation's OpenIoT Summit April 4 - 6 in San Diego
+  Below are some rough notes and thoughts from Linux Foundation's OpenIoT Summit April 4 - 6 in San Diego.
   <br />
   <br />
   <b>Summary</b>
