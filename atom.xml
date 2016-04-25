@@ -4,7 +4,7 @@
   <title><![CDATA[Hselin]]></title>
   <link href="http://hselin.github.io/atom.xml" rel="self"/>
   <link href="http://hselin.github.io/"/>
-  <updated>2016-04-23T21:13:05-07:00</updated>
+  <updated>2016-04-24T18:22:56-07:00</updated>
   <id>http://hselin.github.io/</id>
   <author>
     <name><![CDATA[Albert Chen]]></name>
@@ -22,22 +22,23 @@
   <img class="" src="http://hselin.github.io/images/posts/openiot_summit_2016/iot.png" style="width: 75%; height: auto; display: block; margin-left: auto; margin-right: auto">
   <br />
   <br />
-  Below are my rough notes and thoughts from Linux Foundation&#8217;s OpenIoT Summit April 4 - 6 in San Diego
+  Below are some rough notes and thoughts from Linux Foundation&#8217;s OpenIoT Summit April 4 - 6 in San Diego
   <br />
   <br />
   <b>Summary</b>
   <br />
-  IoT is all about communication (between devices and to the cloud) and its impact on revenue (where value-added computation/control is located).
-  Most IoT devices today operate in silos, independent of each other (e.g. Nest, Fitbit). This “island of devices” model can help companies capture brand “loyalty” and potential continuous revenue streams at a cost of bad user experience/freedom (e.g. iOS and Apple app store). In a way, this is similar to how the Internet <a href="http://hselin.com/blog/2015/06/26/the-world-wide-web/">operated</a> before the advent of HTTP and HTML (e.g. silos of information separated by incompatible protocols, networks and data formats).
+  IoT is all about communication (between devices and to the cloud) and its impact on revenue (where value-added services (compute/control) are located).
+  Most IoT devices today operate in silos, independent of each other (e.g. Nest, Fitbit). This “island of devices” model can help companies capture brand “loyalty” and potential continuous revenue streams at a cost of bad user experience and freedom (e.g. iOS and Apple app store). In a way, this is similar to how the Internet <a href="http://hselin.com/blog/2015/06/26/the-world-wide-web/">operated</a> before the advent of HTTP and HTML (silos of information separated by incompatible protocols, networks and data formats).
   <br />
   <br />
-  Unfortunately, the above situation is not the result from a lack of standard IoT protocols and frameworks.
-  In fact, it is the very opposite – there are actually too many standards/protocols that claim to be open and as the only interoperability solution!
-  This results in confusion and wasted efforts in the IoT ecosystem as companies spend more time and resource working on supporting various IoT standards rather than their value differentiator. This confusion is further propagated when Qualcomm - the founding member of Alljoyn (Allseen alliance) decided to support the &#8220;rival framework&#8221; IoTivity (OIC/OCF) as well.
+  Interestingly, the situation above did not result from a lack of available IoT standards (protocols and frameworks).
+  In fact, it is the very opposite – there are actually too many IoT standards that claim to be the only open and interoperable solution!
+  This results in confusion and wasted efforts in the IoT ecosystem as companies spend more time and resources working on supporting various IoT standards rather than their value differentiator. It does not help the situation when Qualcomm - the founding member of Alljoyn (Allseen alliance) decided to <a href="http://www.forbes.com/sites/aarontilley/2016/02/19/microsoft-qualcomm-and-intel-start-collaborating-on-internet-of-things-standardization/#6061f84c1de0">support</a> the competing framework (IoTivity (OIC/OCF)) as well.  
   <br />
   <br />
-  Most of the companies at the conference prefer proximal rather than cloud control of IoT devices as it puts up a potential walled garden.
-  However, this maybe a biased view as none of the companies that presented own a significant IoT cloud market share (like Google or Fitbit).
+  Most of the companies at the conference prefer proximal rather than cloud control of IoT devices under the guise of privacy and security concerns.
+  However, this maybe a biased view as none of the companies that presented owns any significant IoT cloud market share (like Google or Fitbit).
+  There is a mistrust of IoT cloud companies by device manufactures - as the former could potentially create a walled garden that can exclude vendors and reap most of the revenues from value-added services. 
   <br />
   <br />
   Finally, there was a lot of concern about security. Linus Torvalds and others spoke frequently on the <a href="https://www.schneier.com/essays/archives/2014/01/the_internet_of_thin.html">&#8220;unpatchable”</a> nature of IoT which presents a significant security risk, as IoT devices are &#8220;real physical devices” rather than just software applications.
@@ -169,7 +170,7 @@
               Ultra low BW
             </li>
             <li>
-              Energy harvesting - no power consumption
+              Energy harvesting - no power consumption!
             </li>
             <li>
               Medium range
@@ -247,7 +248,7 @@
               WiFi and BLE
             </li>
             <li>
-              Different from Nest Weave
+              Different from Nest Weave&#8230; aren&#8217;t they the same company?
             </li>
           </ul>
         </li>
@@ -279,11 +280,11 @@
       </ul>
     </li>
     <li>
-      Used by FB messenger
+      Used by FB Messenger
     </li>
   </ul>
 
-  <u>IoT Programming Model</u>
+  <u>IoT programming model</u>
   <ul style="margin-top: 0px;">
     <li>
       Local/proximal control/orchestration
@@ -303,7 +304,7 @@
       IoT frameworks (from lower level to higher)
       <ul style="margin-bottom: 0px;">
         <li>
-          Zephyr (RTOS for IoT) - for devices too small to run Linux<br/>
+          Zephyr (RTOS for IoT) - for devices too small to run Linux (e.g. no MMU)<br/>
           Ostro - IoT Linux (built using Yocto)
         </li>
         <li>
@@ -318,11 +319,6 @@
       </ul>
     </li>
   </ul>
-  
-
-
-
-
 </div>
 
 
