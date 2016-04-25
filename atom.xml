@@ -4,7 +4,7 @@
   <title><![CDATA[Hselin]]></title>
   <link href="http://hselin.github.io/atom.xml" rel="self"/>
   <link href="http://hselin.github.io/"/>
-  <updated>2016-04-24T18:28:22-07:00</updated>
+  <updated>2016-04-24T18:36:36-07:00</updated>
   <id>http://hselin.github.io/</id>
   <author>
     <name><![CDATA[Albert Chen]]></name>
@@ -19,10 +19,13 @@
     <updated>2016-04-23T19:17:36-07:00</updated>
     <id>http://hselin.github.io/blog/2016/04/23/openiot-summit-2016</id>
     <content type="html"><![CDATA[<div style="overflow:auto">
-  <img class="" src="http://hselin.github.io/images/posts/openiot_summit_2016/iot.png" style="width: 75%; height: auto; display: block; margin-left: auto; margin-right: auto">
+  <img class="" src="http://hselin.github.io/images/posts/openiot_summit_2016/iot.png" style="width: 99%; height: auto; display: block; margin-left: auto; margin-right: auto">
   <br />
   <br />
   Below are some rough notes and thoughts from Linux Foundation&#8217;s OpenIoT Summit April 4 - 6 in San Diego.
+  <br />
+  <br />
+  Event web site: <a href="http://events.linuxfoundation.org/events/openiot-summit">http://events.linuxfoundation.org/events/openiot-summit</a>
   <br />
   <br />
   <b>Summary</b>
