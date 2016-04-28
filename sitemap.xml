@@ -3,6 +3,12 @@
   
   
   <url>
+    <loc>http://hselin.github.io/blog/2016/04/27/the-definitive-guide-to-smr/</loc>
+    <lastmod>2016-04-27T23:37:39-07:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
     <loc>http://hselin.github.io/blog/2016/04/23/openiot-summit-2016/</loc>
     <lastmod>2016-04-23T19:17:36-07:00</lastmod>
     <priority>0.8</priority>
@@ -95,42 +101,42 @@
   
   <url>
     <loc>http://hselin.github.io/archives/</loc>
-    <lastmod>2016-04-24T18:36:36-07:00</lastmod>
+    <lastmod>2016-04-27T23:43:19-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://hselin.github.io/blog/archives/</loc>
-    <lastmod>2016-04-24T18:36:36-07:00</lastmod>
+    <lastmod>2016-04-27T23:43:19-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://hselin.github.io/</loc>
-    <lastmod>2016-04-24T18:36:36-07:00</lastmod>
+    <lastmod>2016-04-27T23:43:19-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
     <loc>http://hselin.github.io/blog/</loc>
-    <lastmod>2016-04-24T18:36:36-07:00</lastmod>
+    <lastmod>2016-04-27T23:43:19-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://hselin.github.io/projects/</loc>
-    <lastmod>2016-04-24T18:36:36-07:00</lastmod>
+    <lastmod>2016-04-27T23:43:19-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://hselin.github.io/about/</loc>
-    <lastmod>2016-04-24T18:36:36-07:00</lastmod>
+    <lastmod>2016-04-27T23:43:19-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
