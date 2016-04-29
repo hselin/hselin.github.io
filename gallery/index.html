@@ -10,7 +10,7 @@
 
 <meta name="author" content="Albert Chen"> 
 
-<meta name="description" content=" var feed = new Instafeed({ get: 'tagged', tagName: 'awesome', clientId: 'f4653956090540d59c5d049d465f526e', template: '' }); feed.run(); "> <meta name="keywords" content="">
+<meta name="description" content="var feed = new Instafeed({ get: 'user', userId: 1030277, clientId:'323195e2be5432dfb9103d13fe5a0281', resolution: 'standard_resolution', limit:'6', &hellip;"> <meta name="keywords" content="">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -105,12 +105,14 @@ $(document).ready(
 
 <script type="text/javascript">
  var feed = new Instafeed({
- get: 'tagged',
- tagName: 'awesome',
- clientId: 'f4653956090540d59c5d049d465f526e',
- template: '<a href=""><img src="" /></a>'
- });
- feed.run();
+  get: 'user',
+  userId: 1030277,
+  clientId:'323195e2be5432dfb9103d13fe5a0281',
+  resolution: 'standard_resolution', 
+  limit:'6',
+  template: '<a href=""><img src="" /></a>'
+  });
+  feed.run();
 </script>
 
 
