@@ -9,9 +9,11 @@ footer: true
 
 ->{% img right /images/about/hselin-small-portrait.png %}<-
 
-->Worked: @Western Digital, @Microsoft, @Various startups • Studied: @Stanford, @Cornell<-
+->ἓν οἶδα ὅτι οὐδὲν οἶδα<-
 
-->hselin.chen at gmail.com • [@hselinchen](https://twitter.com/hselinchen) • [linkedin](https://www.linkedin.com/in/alberthchen)<-
+->Work: Western Digital, Microsoft, Various startups • Education: Stanford, Cornell<-
+
+->hselin.chen at gmail.com • [@hselinchen](https://twitter.com/hselinchen) • [linkedin](https://www.linkedin.com/in/alberthchen) • [IG](https://www.instagram.com/hselinchen)<-
 
 -><a href="{{ root_url }}/projects">My Projects</a> • <a href="https://github.com/hselin">Github</a><-
 

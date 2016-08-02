@@ -6,12 +6,70 @@ comments: false
 sharing: true
 footer: true
 ---
+<script type="text/javascript" src="/javascripts/instafeed.min.js"></script>
 
-<!--
-<a href="https://www.instagram.com/hselinchen/">https://www.instagram.com/hselinchen/</a>
--->
+<script type="text/javascript">
+  $(document).ready(function(){
+    var feed = new Instafeed({
+      get: 'user',
+      userId: '346023829',
+      clientId: 'f4653956090540d59c5d049d465f526e',
+      accessToken:'346023829.1677ed0.e55531cbd8644496bb80827cfadddbf0',
+      resolution: 'low_resolution',
+      sortBy: 'most-recent',
+      target: 'instafeed',
+      limit: 33,
+      template: '<table style="border: none;"><tr><td><a href="\{\{link\}\}" target="_blank"><img src="\{\{image\}\}"/></a></td></tr><tr><td style="background-color: white;">Location: \{\{location\}\}</td></tr></table>',
+      after: populatePhotoTable,
+    });
 
-<!-- LightWidget WIDGET --><script src="//lightwidget.com/widgets/lightwidget.js"></script>
-<iframe src="//lightwidget.com/widgets/0dcc22c65cde5088a68511cc8c941a57.html" id="lightwidget_0dcc22c65c" name="lightwidget_0dcc22c65c"  scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+    $(window).scroll(function() {
+     if($(window).scrollTop() + $(window).height() == $(document).height()) {
 
-<div id="instafeed"></div>
+        // call feed.next() once the page reaches the bottom
+        if(feed.hasNext())
+          feed.next();
+    }
+    });
+
+    feed.run();
+  })
+
+
+  function populatePhotoTable()
+  {
+    var counter = 0;
+    var currentRow;
+    var cell;
+
+    $('#instafeed').children('table').each(function () {
+      // "this" is the current element in the loop
+
+      if((counter % 3) == 0)
+      {
+        currentRow = $('<tr>');
+        currentRow.appendTo($('#photo_table'));
+      }
+
+      cell = $('<td style="background-color: white;">');
+      cell.appendTo(currentRow);
+
+
+      $(this).detach().appendTo(cell);
+
+      counter++;
+    });
+  }
+
+</script>
+
+
+
+<div id='instafeed' style='display: none;'></div>
+
+<div style="overflow:auto">
+  <table id='photo_table' style='border: none; border-collapse: separate; border-spacing: 8px;'></table>
+</div>
+
+
+
