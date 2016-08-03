@@ -10,7 +10,7 @@
 
 <meta name="author" content="Albert Chen"> 
 
-<meta name="description" content="$(document).ready(function(){ var feed = new Instafeed({ get: 'user', userId: '346023829', clientId: 'f4653956090540d59c5d049d465f526e', accessToken &hellip;"> <meta name="keywords" content="">
+<meta name="description" content="var photoElements = []; $(document).ready(function() { $( window ).resize(function() { clearPhotoTable(); populatePhotoTable(); }); var feed = new &hellip;"> <meta name="keywords" content="">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -57,7 +57,19 @@ $(document).ready(
 );
 </script>
 
-	
+	<!-- start source/_includes/head.html -->
+
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- end source/_includes/head.html -->
 </head>
 
 
@@ -104,7 +116,15 @@ $(document).ready(
 
 
 <script type="text/javascript">
-  $(document).ready(function(){
+  var photoElements = [];
+
+
+  $(document).ready(function() {
+    $( window ).resize(function() {
+      clearPhotoTable();
+      populatePhotoTable();
+    });
+
     var feed = new Instafeed({
       get: 'user',
       userId: '346023829',
@@ -115,7 +135,7 @@ $(document).ready(
       target: 'instafeed',
       limit: 33,
       template: '<table style="border: none;"><tr><td><a href="\{\{link\}\}" target="_blank"><img src="\{\{image\}\}"/></a></td></tr><tr><td style="background-color: white;">Location: \{\{location\}\}</td></tr></table>',
-      after: populatePhotoTable,
+      after: processNewPhotos,
     });
 
     $(window).scroll(function() {
@@ -128,19 +148,57 @@ $(document).ready(
     });
 
     feed.run();
-  })
+  });
 
+  function processNewPhotos()
+  {
+    $('#instafeed').children('table').each(function () {
+      photoElements.push($(this));
+      $(this).showInPhotoTable = false;
+      $(this).detach();
+    });
+
+    populatePhotoTable();
+  }
+
+  function clearPhotoTable()
+  {
+    for(var i = 0; i < photoElements.length; i++)
+    {
+      photoElements[i].detach();
+      photoElements[i].showInPhotoTable = false;
+    }
+
+    $('#photo_table').empty();
+  }
 
   function populatePhotoTable()
   {
     var counter = 0;
     var currentRow;
     var cell;
+    var numPhotosPerRow;
+    var photoWidth = 306;
+    var viewPortWidth;
 
-    $('#instafeed').children('table').each(function () {
-      //console.log(this); // "this" is the current element in the loop
+    viewPortWidth = $(window).width();
 
-      if((counter % 3) == 0)
+    if(viewPortWidth >= (photoWidth * 3))
+    {
+      numPhotosPerRow = 3;
+    }
+    else
+    {
+      if(viewPortWidth >= (photoWidth * 2))  numPhotosPerRow = 2;
+      else numPhotosPerRow = 1;
+    }
+
+    for(var i = 0; i < photoElements.length; i++)
+    {
+      if(photoElements[i].showInPhotoTable)
+        continue;
+
+      if((counter % numPhotosPerRow) == 0)
       {
         currentRow = $('<tr>');
         currentRow.appendTo($('#photo_table'));
@@ -149,11 +207,11 @@ $(document).ready(
       cell = $('<td style="background-color: white;">');
       cell.appendTo(currentRow);
 
-
-      $(this).detach().appendTo(cell);
+      photoElements[i].appendTo(cell);
+      photoElements[i].showInPhotoTable = true;
 
       counter++;
-    });
+    }
   }
 
 </script>
@@ -167,7 +225,7 @@ $(document).ready(
 
 
 <div style="overflow:auto">
-  <table id='photo_table' style='border: none; border-collapse: separate; border-spacing: 8px;'></table>
+  <table id='photo_table' style='border: none; border-collapse: separate; border-spacing: 15px;'></table>
 </div>
 
 
