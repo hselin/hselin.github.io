@@ -6,10 +6,20 @@ comments: false
 sharing: true
 footer: true
 ---
+
+
 <script type="text/javascript" src="/javascripts/instafeed.min.js"></script>
 
 <script type="text/javascript">
-  $(document).ready(function(){
+  var photoElements = [];
+
+
+  $(document).ready(function() {
+    $( window ).resize(function() {
+      clearPhotoTable();
+      populatePhotoTable();
+    });
+
     var feed = new Instafeed({
       get: 'user',
       userId: '346023829',
@@ -20,7 +30,7 @@ footer: true
       target: 'instafeed',
       limit: 33,
       template: '<table style="border: none;"><tr><td><a href="\{\{link\}\}" target="_blank"><img src="\{\{image\}\}"/></a></td></tr><tr><td style="background-color: white;">Location: \{\{location\}\}</td></tr></table>',
-      after: populatePhotoTable,
+      after: processNewPhotos,
     });
 
     $(window).scroll(function() {
@@ -33,19 +43,57 @@ footer: true
     });
 
     feed.run();
-  })
+  });
 
+  function processNewPhotos()
+  {
+    $('#instafeed').children('table').each(function () {
+      photoElements.push($(this));
+      $(this).showInPhotoTable = false;
+      $(this).detach();
+    });
+
+    populatePhotoTable();
+  }
+
+  function clearPhotoTable()
+  {
+    for(var i = 0; i < photoElements.length; i++)
+    {
+      photoElements[i].detach();
+      photoElements[i].showInPhotoTable = false;
+    }
+
+    $('#photo_table').empty();
+  }
 
   function populatePhotoTable()
   {
     var counter = 0;
     var currentRow;
     var cell;
+    var numPhotosPerRow;
+    var photoWidth = 306;
+    var viewPortWidth;
 
-    $('#instafeed').children('table').each(function () {
-      // "this" is the current element in the loop
+    viewPortWidth = $(window).width();
 
-      if((counter % 3) == 0)
+    if(viewPortWidth >= (photoWidth * 3))
+    {
+      numPhotosPerRow = 3;
+    }
+    else
+    {
+      if(viewPortWidth >= (photoWidth * 2))  numPhotosPerRow = 2;
+      else numPhotosPerRow = 1;
+    }
+
+    for(var i = 0; i < photoElements.length; i++)
+    {
+      if(photoElements[i].showInPhotoTable)
+        continue;
+
+      if((counter % numPhotosPerRow) == 0)
       {
         currentRow = $('<tr>');
         currentRow.appendTo($('#photo_table'));
@@ -54,21 +102,19 @@ footer: true
       cell = $('<td style="background-color: white;">');
       cell.appendTo(currentRow);
 
-
-      $(this).detach().appendTo(cell);
+      photoElements[i].appendTo(cell);
+      photoElements[i].showInPhotoTable = true;
 
       counter++;
-    });
+    }
   }
 
 </script>
 
+<div id='instafeed' style='display:none;'></div>
 
-
-<div id='instafeed' style='display: none;'></div>
-
-<div style="overflow:auto">
-  <table id='photo_table' style='border: none; border-collapse: separate; border-spacing: 8px;'></table>
+<div style="overflow:auto; text-align:center;">
+    <table id='photo_table' style='margin:auto; border: none; border-collapse: separate; border-spacing: 15px;'></table>
 </div>
 
 
